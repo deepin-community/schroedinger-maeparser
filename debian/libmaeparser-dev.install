@@ -1,0 +1,3 @@
+usr/include/maeparser/
+usr/lib/*/cmake
+usr/lib/*/libmaeparser.so

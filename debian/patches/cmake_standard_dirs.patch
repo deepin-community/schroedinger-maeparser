@@ -1,0 +1,15 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -78,10 +78,10 @@
+ 
+ INSTALL(EXPORT maeparser-targets
+     FILE ${PROJECT_NAME}-config.cmake
+-    DESTINATION lib/cmake)
++    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake)
+ 
+ file(GLOB mae_headers "*.hpp")
+-install(FILES ${mae_headers} DESTINATION include/maeparser)
++install(FILES ${mae_headers} DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/maeparser)
+ 
+ # Tests
+ if (MAEPARSER_BUILD_TESTS)

@@ -1,0 +1,100 @@
+schroedinger-maeparser (1.2.4-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:48:35 +0800
+
+schroedinger-maeparser (1.2.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.2.4
+  * Simplifying debian/watch and debian/rules.
+  * Refreshing patch.
+  * Adding myself to debian/copyright.
+  * Bumping debhelper-compat (no changes).
+  * Bumping Standards-Version (no changes).
+
+ -- Andrius Merkys <merkys@debian.org>  Mon, 19 Oct 2020 04:26:00 -0400
+
+schroedinger-maeparser (1.2.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Declaring Breaks/Replaces for previously used binary package names
+    (Closes: #956057)
+
+ -- Andrius Merkys <merkys@debian.org>  Tue, 07 Apr 2020 06:11:27 -0400
+
+schroedinger-maeparser (1.2.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * No changes upload to unstable.
+
+ -- Andrius Merkys <merkys@debian.org>  Sun, 05 Apr 2020 02:19:36 -0400
+
+schroedinger-maeparser (1.2.3-1) experimental; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.2.3
+  * Refreshing cmake_standard_dirs.patch.
+  * Dropping pull-55.patch: applied upstream.
+  * Renaming binary packages according to the SONAME (Closes: #948552)
+  * Adding Rules-Requires-Root: no.
+  * Wrapping and sorting.
+  * Using debhelper-compat; bumping (no changes).
+  * Not creating empty usr/share/cmake/ directory.
+  * Adding build dependency on zlib1g-dev.
+
+ -- Andrius Merkys <merkys@debian.org>  Thu, 19 Mar 2020 02:38:51 -0400
+
+schroedinger-maeparser (1.2.2-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.2.2
+  * Updating debian/libschroedinger-maeparser1.lintian-overrides.
+  * Adding a patch to install all the headers.
+
+ -- Andrius Merkys <merkys@debian.org>  Thu, 14 Nov 2019 07:32:34 -0500
+
+schroedinger-maeparser (1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * debian/patches/soversion.patch: Removed, no longer needed.
+  * debian/control (Build-Depends): Added libboost-filesystem-dev and
+    libboost-iostreams-dev.
+  * debian/rules: Remove all custom rules.
+  * debian/patches/cmake_standard_dirs.patch: New patch, fixes installation
+    directories.
+  * debian/libschroedinger-maeparser1.install: New file, installing the shared
+    library.
+  * debian/libschroedinger-maeparser-dev.install: Updated.
+  * debian/libschroedinger-maeparser1.lintian-overrides: Updated.
+
+ -- Michael Banck <mbanck@debian.org>  Tue, 23 Jul 2019 00:15:57 -0300
+
+schroedinger-maeparser (1.0.1-4) unstable; urgency=medium
+
+  * debian/libschroedinger-maeparser-dev.dirs: Added /usr/share/cmake.
+  * debian/rules: Install cmake files into /usr/share/cmake.
+
+ -- Michael Banck <mbanck@debian.org>  Wed, 16 Jan 2019 15:58:37 +0100
+
+schroedinger-maeparser (1.0.1-3) unstable; urgency=medium
+
+  * Team upload
+  * debian/control (Build-Depends): Added cmake and libboost-test-dev.
+  * debian/rules: Use `builddir' instead of `build' in order not to confuse
+    `debian/rules build'.
+
+ -- Michael Banck <mbanck@debian.org>  Wed, 16 Jan 2019 09:00:36 +0100
+
+schroedinger-maeparser (1.0.1-2) unstable; urgency=medium
+
+  * Fixing empty /usr/include/maeparser directory
+
+ -- Steffen Moeller <moeller@debian.org>  Thu, 06 Dec 2018 15:01:13 +0100
+
+schroedinger-maeparser (1.0.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #910290)
+
+ -- Steffen Moeller <moeller@debian.org>  Wed, 03 Oct 2018 21:41:04 +0200

@@ -1,0 +1,9 @@
+schroedinger-maeparser for Debian
+--------------------------------
+
+Upstream neglects the umlaut in their name for their github user name.
+Somehow I felt that we should not follow suit in the naming of our Debian packages.
+
+
+ -- Steffen Moeller <moeller@debian.org>  Wed, 03 Oct 2018 21:41:04 +0200
+

@@ -1,0 +1,62 @@
+Source: schroedinger-maeparser
+Priority: optional
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Steffen Moeller <moeller@debian.org>,
+Build-Depends:
+ cmake,
+ debhelper-compat (= 13),
+ libboost-filesystem-dev,
+ libboost-iostreams-dev,
+ libboost-test-dev,
+ zlib1g-dev,
+Standards-Version: 4.5.0
+Section: libs
+Homepage: https://www.schrodinger.com/maestro
+Vcs-Browser: https://salsa.debian.org/debichem-team/schroedinger-maeparser
+Vcs-Git: https://salsa.debian.org/debichem-team/schroedinger-maeparser.git
+Rules-Requires-Root: no
+
+Package: libmaeparser-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libmaeparser1 (= ${binary:Version}),
+ ${misc:Depends},
+Breaks:
+ libschroedinger-maeparser-dev,
+Replaces:
+ libschroedinger-maeparser-dev,
+Description: Development files to parse Schrödinger Maestro files
+ This package provides header files to develop one's own software
+ that uses a library wth an Open Source parser for Maestro (.mae)
+ files.
+
+Package: libmaeparser1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Breaks:
+ libschroedinger-maeparser1,
+Replaces:
+ libschroedinger-maeparser1,
+Description: parser for Schrödinger Maestro files
+ Maestro is a commercial "all-purpose molecular modeling environment",
+ produced and distributed by the company Schrödinger. Maestro has its
+ own cognate file format, typically associated with the ".mae" file
+ extension. This package provides an Open Source parser for the Maestro
+ file format, released and maintained by the Maestro developers.
+ .
+ This facilitates a lossless transition from the widely accepted suite
+ of Schrödinger into local custom developments or the Open Source world
+ at large. Maeparser handles output from:
+  * Molecular Dynamics applications, such as Desmond and FEP+
+  * Ligand-Protein Docking applications, such as Glide
+  * Homology Modeling and folding applications, such as Prime
+  * Ligand-based search applications, such as Phase and Phase Shape
+  * Quantum Mechanics applications, such as Jaguar
+  * Protein-Protein Docking applications
+  * ... many other backends used in both Life and Material Sciences
